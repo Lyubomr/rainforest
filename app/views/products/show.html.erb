@@ -1,4 +1,7 @@
-<h2><%= @product.title %></h2> <br>
+<h2><%= @product.name %></h2> <br>
+<p>
+  <%= link_to "Back to Products Listing", products_path %>
+</p>
 <p>
   <%= @product.description %> <%= @product.price_in_cents %>
 </p>

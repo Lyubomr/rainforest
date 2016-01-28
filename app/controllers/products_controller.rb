@@ -1,16 +1,16 @@
 class ProductsController < ApplicationController
 
 
-    def index #
+    def index
       @products = Product.all
     end
 
     def show
-      @products = Product.find(params[:id])
+      @product = Product.find(params[:id])
     end
 
     def new
-      @oroducts = Product.new
+      @product = Product.new
     end
 
     def edit
@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
       if @product.save
         redirect_to products_url
       else
-        render :edit
+        render :new
       end
     end
 
