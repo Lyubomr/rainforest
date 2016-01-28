@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :products
+  get 'users/new'
 
+  get 'users/create'
+
+  resources :products
+  resources :users, only: [:new, :create]
 # get 'products' => "products#index" # => displays a list of all products
 # get 'products/new'=> "products#new" # => returns an HTML form for listing a new product
 # post 'products' => "proucts#create" # => creates the new product listing from the provided HTML form
