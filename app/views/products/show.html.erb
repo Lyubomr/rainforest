@@ -3,5 +3,5 @@
   <%= link_to "Back to Products Listing", products_path %>
 </p>
 <p>
-  <%= @product.description %> <%= @product.price_in_cents %>
+  <%= @product.description %> $<%= @product.formatted_price %>
 </p>
