@@ -1,0 +1,9 @@
+<h1>Products Listing</h1>
+<!-- Should list out every product -->
+<% @products.each do |product| %>
+  <p>
+    <%= product.name %> <br>
+    <%= product.description %> <br>
+    <%= product.price_in_cents %> <br>
+<% end %>
+  </p>
